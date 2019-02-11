@@ -24,4 +24,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # custom ignores
-/public/img
+/public/assets
