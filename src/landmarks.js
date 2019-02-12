@@ -1,54 +1,61 @@
 export const landmarks = [{
-    id: 1,
+    key: 1,
     name: "Big Ben",
     location: "London, UK",
-    img: "../public/img/card/bigben.jpg"
+    img: "bigben.jpg"
   },
   {
-    id: 2,
+    key: 2,
     name: "Blue Domed Church",
     location: "Santorini, Greece",
-    img: "../public/img/card/bluedomedchurch.jpg"
+    img: "bluedomedchurch.jpg"
   },
   {
-    id: 3,
-    name: "Bran Castle",
-    location: "Transylvania, Romania",
-    img: "../public/img/card/brancastle.jpg"
+    key: 3,
+    name: "Tower of Pisa",
+    location: "Pisa, Italy",
+    img: "pisa.jpg"
   },
   {
-    id: 4,
+    key: 4,
     name: "Burj al Arab",
-    location: "Dubai, UAE"
+    location: "Dubai, UAE",
+    img: "burjalarab.jpg"
   },
   {
-    id: 5,
+    key: 5,
     name: "Saint Basil's Cathedral",
-    location: "Moscow, Russia"
+    location: "Moscow, Russia",
+    img: "cathedral.jpg"
   },
   {
-    id: 6,
+    key: 6,
     name: "Christ the Redeemer",
-    location: "Rio de Janeiro, Brazil"
+    location: "Rio de Janeiro, Brazil",
+    img: "christ.jpg"
   },
   {
-    id: 7,
+    key: 7,
     name: "Eiffel Tower",
-    location: "Paris, France"
+    location: "Paris, France",
+    img: "eiffel.jpg"
   },
   {
-    id: 8,
-    name: "Great Wall",
-    location: "China"
+    key: 8,
+    name: "Great Sphinx",
+    location: "Giza, Egypt",
+    img: "sphinx.jpg"
   },
   {
-    id: 9,
+    key: 9,
     name: "Lascaux",
-    location: "Montignac, France"
+    location: "Montignac, France",
+    img: "lascaux.jpg"
   },
   {
-    id: 10,
-    name: "Liberty",
-    location: "New York, USA"
+    key: 10,
+    name: "Statue of Liberty",
+    location: "New York, USA",
+    img: "liberty.jpg"
   }
 ]
