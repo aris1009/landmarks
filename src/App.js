@@ -18,7 +18,7 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    let url = "https://script.google.com/macros/s/AKfycbwWQstLYMN8GYFAY8a0TNJnqpflR08Gt8dc-jcO_b8-y8dqOLac/exec"
+    let url = process.env.REACT_APP_STORED_DATA_URL;
     //// TODO: Hardcoded-string :(
     fetch(url).then(response => {
       if (!response.ok) {
