@@ -1,0 +1,44 @@
+.preloader {
+  margin: 120px auto 0;
+  color: #fff;
+  margin: 50px 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.preloader .line {
+  width: 2px;
+  height: 18px;
+  background: #fff;
+  margin: 0 1px;
+  display: inline-block;
+  animation: opacity-2 1000ms infinite ease-in-out;
+}
+
+.preloader .line-1 { animation-delay: 800ms; }
+.preloader .line-2 { animation-delay: 600ms; }
+.preloader .line-3 { animation-delay: 400ms; }
+.preloader .line-4 { animation-delay: 200ms; }
+.preloader .line-6 { animation-delay: 200ms; }
+.preloader .line-7 { animation-delay: 400ms; }
+.preloader .line-8 { animation-delay: 600ms; }
+.preloader .line-9 { animation-delay: 800ms; }
+
+
+@keyframes opacity-2 {
+  0% {
+    opacity: 1;
+    height: 15px;
+  }
+  50% {
+    opacity: 0;
+    height: 12px;
+  }
+  100% {
+    opacity: 1;
+    height: 15px;
+  }
+}

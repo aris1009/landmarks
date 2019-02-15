@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { landmarks } from './landmarks'
 
 const imgpath = process.env.PUBLIC_URL + '/assets/cards/'
 
