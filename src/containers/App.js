@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
-import Loader from './Loader';
-import Searchbox from './Searchbox';
-import Scroll from './Scroll'
-import Cardlist from './Cardlist';
+import Loader from '../components/Loader';
+import Searchbox from '../components/Searchbox';
+import Scroll from '../components/Scroll'
+import Cardlist from '../components/Cardlist';
+
+import ErrorBoundary from '../components/ErrorBoundary'
 
 export default class App extends Component {
   constructor() {
@@ -19,7 +21,6 @@ export default class App extends Component {
 
   componentDidMount() {
     let url = process.env.REACT_APP_STORED_DATA_URL;
-    //// TODO: Hardcoded-string :(
     fetch(url).then(response => {
       if (!response.ok) {
         throw response
@@ -31,25 +32,26 @@ export default class App extends Component {
   }
 
   render() {
-    const filteredLandmarks = this.state.landmarks.filter(landmark => {
-      return landmark.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
+    const {landmarks, searchfield} = this.state;
+    const filteredLandmarks = landmarks.filter(landmark => {
+      return (landmark.name.toLowerCase().includes(searchfield.toLowerCase()) ||
+              landmark.location.toLowerCase().includes(searchfield.toLowerCase()));
     });
     /* // TODO: Serve images from an API */
-    if (this.state.landmarks.length === 0) {
-      console.log(this.state.landmarks.length === 0);
-      return (
-        <div>
-          <h1 className="tc pa2 pt2 ma0 f1 lh-title">World Landmarks</h1>
-          <Loader/>
-        </div>)
+    if (!landmarks.length) {
+      return (<div>
+        <h1 className="tc pa2 pt2 ma0 f1 lh-title">World Landmarks</h1>
+        <Loader/>
+      </div>)
     } else {
       return (<div>
         <h1 className="tc pa2 pt2 ma0 f1 lh-title">World Landmarks</h1>
         <Searchbox searching={this.onUserIsSearching}/>
         <Scroll>
-          <Cardlist landmarks={filteredLandmarks}/>
+          <ErrorBoundary>
+            <Cardlist landmarks={filteredLandmarks}/>
+          </ErrorBoundary>
         </Scroll>
-        }
       </div>)
     }
   }
