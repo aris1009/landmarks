@@ -13,7 +13,10 @@ body {
 
 h1 {
   font-family: 'Abril Fatface', cursive;
-  color: white;
+  background: linear-gradient(to left, #eee 0%, #ddd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 2px #333);
 }
 
 code {

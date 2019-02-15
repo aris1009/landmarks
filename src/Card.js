@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Image from './LandmarkImage';
+import LandmarkImage from './LandmarkImage';
 
 class Card extends Component {
 	render() {
 		const { img, name, location } = this.props;
 		return ( <div className="tc bg-light-blue dib br3 pa3 ma2 grow bw2 shadow-5">
-			<Image img={img}/>
+			<LandmarkImage img={img}/>
 			<div>
 				<span>{name}</span><br/>
 				<span>{location}</span>
