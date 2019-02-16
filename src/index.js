@@ -1,16 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+import {searchLandmarks} from './reducers';
 import App from './containers/App';
 import './index.css';
 import 'tachyons';
 
+const store = createStore(searchLandmarks);
+
 ReactDOM.render(
-  <div style={{
-    MozUserSelect: 'none',
-    WebkitUserSelect: 'none'
-  }}>
-  <App/>
-</div>, document.getElementById('root'));
+  <Provider store={store}>
+    <App />
+  </Provider>
+  , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
