@@ -4,13 +4,13 @@ import {Provider} from 'react-redux';
 import {createStore, applyMiddleware, combineReducers} from 'redux';
 import {createLogger} from 'redux-logger';
 import thunk from 'redux-thunk';
-import {searchLandmarks, fetchLandmarks} from './reducers';
+import {searchLandmarks, requestLandmarks} from './reducers';
 import App from './containers/App';
 import './index.css';
 import 'tachyons';
 
 const logger = createLogger();
-const rootReducer = combineReducers(searchLandmarks, fetchLandmarks);
+const rootReducer = combineReducers({searchLandmarks, requestLandmarks});
 const store = createStore(rootReducer, applyMiddleware(thunk, logger));
 
 ReactDOM.render(<Provider store={store}>
