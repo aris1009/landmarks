@@ -42,7 +42,6 @@ class App extends Component {
   render() {
     const {landmarks} = this.state;
     const {searchfield, onUserIsSearching} = this.props;
-    console.log(onUserIsSearching);
     const filteredLandmarks = landmarks.filter(landmark => {
       return (landmark.name.toLowerCase().includes(searchfield.toLowerCase()) ||
               landmark.location.toLowerCase().includes(searchfield.toLowerCase()));

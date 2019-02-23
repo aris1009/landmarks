@@ -1,6 +1,6 @@
 {
   "name": "landmarks",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "react": "^16.8.1",
@@ -8,6 +8,7 @@
     "react-redux": "^6.0.0",
     "react-scripts": "^2.1.5",
     "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
     "tachyons": "^4.11.1"
   },
   "scripts": {
@@ -24,5 +25,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "redux-logger": "^3.0.6"
+  }
 }
